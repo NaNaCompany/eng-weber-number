@@ -1,0 +1,74 @@
+export const tool={
+  "category": "유체역학",
+  "category_en": "Fluid mechanics",
+  "id": "E132",
+  "slug": "eng-weber-number",
+  "title": "웨버수 계산기",
+  "title_en": "Weber Number Calculator",
+  "fields": [
+    {
+      "key": "rho",
+      "label": "기준 유체 밀도",
+      "label_en": "Reference-fluid density",
+      "dimension": "density",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "kgm3",
+      "display_value": "1000"
+    },
+    {
+      "key": "v",
+      "label": "두 상의 특성 상대속도",
+      "label_en": "Characteristic relative speed",
+      "dimension": "speed",
+      "example": 2,
+      "constraint": "nonnegative",
+      "display_unit": "ms",
+      "display_value": "2"
+    },
+    {
+      "key": "length",
+      "label": "특성길이",
+      "label_en": "Characteristic length",
+      "dimension": "length",
+      "example": 0.01,
+      "constraint": "positive",
+      "display_unit": "mm",
+      "display_value": "10"
+    },
+    {
+      "key": "sigma",
+      "label": "두 상 사이 표면·계면장력",
+      "label_en": "Surface or interfacial tension",
+      "dimension": "surfaceTension",
+      "example": 0.072,
+      "constraint": "positive",
+      "display_unit": "Nm",
+      "display_value": "0.071999999999999995"
+    }
+  ],
+  "result_label": "웨버수 We",
+  "result_label_en": "Weber number We",
+  "result_dimension": "ratio",
+  "formula": "We = ρV²L / σ",
+  "purpose": "선택한 길이와 상대속도에서 관성 효과와 계면장력 효과의 비를 계산합니다.",
+  "purpose_en": "Calculate the ratio of inertia to interfacial-tension effects for a stated characteristic length and relative speed.",
+  "assumptions": "밀도·길이·속도는 같은 기준 상과 현상 정의에 맞추어 입력합니다. 두 상 사이의 일정한 계면장력을 사용합니다. We만으로 액적 파괴, 분무, 기포 형상이나 보편적인 임계값을 단정하지 않습니다.",
+  "assumptions_en": "Required: density, characteristic length and relative speed consistent with the chosen reference phase and phenomenon, with constant interfacial tension. Excluded: inferring universal droplet-breakup, spray or bubble-shape thresholds from We alone.",
+  "sources": [
+    {
+      "label": "MIT: Surface-tension dimensionless groups",
+      "url": "https://web.mit.edu/2.25/www/225_sect_11.html"
+    },
+    {
+      "label": "MIT 2.25 · Surface-tension dimensionless groups, original notes",
+      "url": "https://web.mit.edu/2.25/www_old.bak/notes/11.pdf"
+    }
+  ],
+  "condition": "특성길이·상대속도·기준 상의 정의를 확인했습니다.",
+  "condition_en": "I confirmed the characteristic length, relative speed and reference phase.",
+  "site": "https://nanalab.kr/eng-weber-number/",
+  "repository": "https://github.com/NaNaCompany/eng-weber-number",
+  "groups": [],
+  "output_unit": "1"
+};

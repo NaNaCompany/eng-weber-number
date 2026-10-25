@@ -1,0 +1,53 @@
+{
+  "id": "E132",
+  "value": 555.5555555555555,
+  "reference70": "555.5555555555555555555555555555555555555555555555555555555555555555556",
+  "method": "Independent Python Decimal with 80-digit working precision, reported to 70 significant digits; direct physical formula. E140 uses 260-step dimensional-wavenumber bisection, independent of the runtime dimensionless solver.",
+  "cases": [
+    {
+      "name": "stationary interface",
+      "values": {
+        "v": 0
+      },
+      "expected": 0.0,
+      "reference70": "0e+1"
+    },
+    {
+      "name": "double characteristic length",
+      "values": {
+        "length": 0.02
+      },
+      "expected": 1111.111111111111,
+      "reference70": "1111.111111111111111111111111111111111111111111111111111111111111111111"
+    },
+    {
+      "name": "alternate fluid",
+      "values": {
+        "rho": 800,
+        "v": 3,
+        "length": 0.005,
+        "sigma": 0.025
+      },
+      "expected": 1440.0,
+      "reference70": "1440"
+    },
+    {
+      "name": "balanced extreme products",
+      "values": {
+        "rho": 1e-200,
+        "v": 1e+200,
+        "length": 1e-200,
+        "sigma": 1
+      },
+      "expected": 1.0,
+      "reference70": "1"
+    },
+    {
+      "name": "zero tension rejected",
+      "values": {
+        "sigma": 0
+      },
+      "throws": true
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>웨버수 계산기 · 단위 변환과 공식 | NaNa Lab</title><meta name="description" content="선택한 길이와 상대속도에서 관성 효과와 계면장력 효과의 비를 계산합니다. · 입력 단위 변환과 적용 조건을 확인하고 웨버수 We 한 값을 계산합니다.">
+<link rel="canonical" href="https://nanalab.kr/eng-weber-number/"><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="웨버수 계산기"><meta property="og:description" content="선택한 길이와 상대속도에서 관성 효과와 계면장력 효과의 비를 계산합니다."><meta property="og:url" content="https://nanalab.kr/eng-weber-number/"><meta property="og:image" content="https://nanalab.kr/eng-weber-number/og.png"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "웨버수 계산기", "url": "https://nanalab.kr/eng-weber-number/", "description": "선택한 길이와 상대속도에서 관성 효과와 계면장력 효과의 비를 계산합니다.", "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "inLanguage": "ko", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "NaNa Lab", "url": "https://nanalab.kr/"}}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767176956440077"
+        crossorigin="anonymous"></script>
+<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+            (window, document, 'script', 'dataLayer', 'GTM-NV2WWQXB');
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZYSF0173P"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2ZYSF0173P');
+    </script>
+</head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV2WWQXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#calculator">계산 입력으로 이동</a>
+<header><a class="brand" href="https://nanalab.kr/">NaNa Lab <span aria-hidden="true">/</span> Engineering</a><span class="edition">E132 · 유체역학</span></header>
+<main><p class="eyebrow">ONE FORMULA, ONE ANSWER</p><h1>웨버수 계산기</h1><p class="intro">선택한 길이와 상대속도에서 관성 효과와 계면장력 효과의 비를 계산합니다.. 입력 단위를 선택하고 조건에 맞는 한 값을 구하세요.</p>
+<div class="workspace"><section class="panel"><h2>계산할 값</h2><form id="calculator" novalidate><div class="row"><label for="field-rho">기준 유체 밀도</label><div class="input-pair"><input id="field-rho" name="rho" type="text" inputmode="decimal" value="1000" required autocomplete="off" spellcheck="false" aria-describedby="note-rho"><select id="unit-rho" name="unit-rho" aria-label="기준 유체 밀도 단위"><option value="kgm3" selected>kg/m³</option><option value="gcm3">g/cm³</option><option value="kgL">kg/L</option></select></div><p class="field-note" id="note-rho">SI 변환 후 0보다 큰 값</p></div><div class="row"><label for="field-v">두 상의 특성 상대속도</label><div class="input-pair"><input id="field-v" name="v" type="text" inputmode="decimal" value="2" required autocomplete="off" spellcheck="false" aria-describedby="note-v"><select id="unit-v" name="unit-v" aria-label="두 상의 특성 상대속도 단위"><option value="ms" selected>m/s</option><option value="kms">km/s</option><option value="kmh">km/h</option><option value="cms">cm/s</option></select></div><p class="field-note" id="note-v">0 이상</p></div><div class="row"><label for="field-length">특성길이</label><div class="input-pair"><input id="field-length" name="length" type="text" inputmode="decimal" value="10" required autocomplete="off" spellcheck="false" aria-describedby="note-length"><select id="unit-length" name="unit-length" aria-label="특성길이 단위"><option value="m">m</option><option value="km">km</option><option value="cm">cm</option><option value="mm" selected>mm</option><option value="um">μm</option><option value="nm">nm</option><option value="pm">pm</option><option value="AU">AU</option><option value="pc">pc</option></select></div><p class="field-note" id="note-length">SI 변환 후 0보다 큰 값</p></div><div class="row"><label for="field-sigma">두 상 사이 표면·계면장력</label><div class="input-pair"><input id="field-sigma" name="sigma" type="text" inputmode="decimal" value="0.071999999999999995" required autocomplete="off" spellcheck="false" aria-describedby="note-sigma"><select id="unit-sigma" name="unit-sigma" aria-label="두 상 사이 표면·계면장력 단위"><option value="Nm" selected>N/m</option><option value="mNm">mN/m</option></select></div><p class="field-note" id="note-sigma">SI 변환 후 0보다 큰 값</p></div><label class="condition"><input type="checkbox" name="conditions" id="conditions">특성길이·상대속도·기준 상의 정의를 확인했습니다.</label><div class="actions"><button class="primary" type="submit">계산하기</button><button type="button" id="example">예제 넣기</button><button type="button" id="reset">비우기</button></div></form><p class="local-note">계산은 이 브라우저에서 처리합니다. 지수 표기(예: 1.2e-3)를 사용할 수 있습니다.</p><noscript>계산에는 JavaScript가 필요합니다. 아래 공식과 적용 조건은 그대로 읽을 수 있습니다.</noscript></section>
+<section id="result" class="panel output-panel" aria-labelledby="result-heading"><h2 id="result-heading">계산 결과</h2><p class="result-caption">웨버수 We</p><output id="result-value" class="number" form="calculator" aria-live="polite">—</output><span id="output-unit-label" class="result-unit"></span><div id="output-control"><label for="output-unit">결과 표시 단위</label><select id="output-unit"><option value="1" selected>무차원</option></select></div><p id="status" class="status" role="status">입력 후 계산하기를 누르세요.</p><button type="button" id="copy-result" class="copy">결과 복사</button><div class="formula"><span>FORMULA</span><p>We = ρV²L / σ</p></div></section></div>
+<section class="reference"><h2>적용 조건</h2><p>밀도·길이·속도는 같은 기준 상과 현상 정의에 맞추어 입력합니다. 두 상 사이의 일정한 계면장력을 사용합니다. We만으로 액적 파괴, 분무, 기포 형상이나 보편적인 임계값을 단정하지 않습니다.</p><p class="small">표시값은 부동소수점 근삿값입니다. 설계 안전계수와 입력하지 않은 오차 요인은 계산하지 않습니다.</p><details><summary>공식 근거와 제작 정보</summary><ul><li><a href="https://web.mit.edu/2.25/www/225_sect_11.html" target="_blank" rel="noopener noreferrer">MIT: Surface-tension dimensionless groups</a></li><li><a href="https://web.mit.edu/2.25/www_old.bak/notes/11.pdf" target="_blank" rel="noopener noreferrer">MIT 2.25 · Surface-tension dimensionless groups, original notes</a></li></ul><p class="small">코드·설명·아이콘·대표 이미지는 NaNa Lab에서 직접 작성했습니다. 연결된 자료의 본문·도판·코드를 복제하지 않았습니다.</p><p class="small">상수 기준: <a href="https://physics.nist.gov/cuu/Constants/">NIST / CODATA 2022</a>. μ₀·ε₀는 측정 기반 권고값이며 정의상수가 아닙니다. 사용 값과 정확성 구분은 <a href="SOURCES.md">출처 기록</a>에 있습니다.</p><p class="small">이 사이트에는 Google 광고·분석 및 Cloudflare 분석 코드가 포함됩니다.</p></details></section></main>
+<footer>© 2026 NaNa Lab · 직접 작성한 단일 수치 공학 도구 · <a href="https://github.com/NaNaCompany/eng-weber-number">소스 코드</a></footer><a class="more-apps" href="https://nanalab.kr/apps/">More Apps</a>
+<script type="module" src="app.js"></script>
+<script>
+(function () {
+  function ensureBeacon() {
+    // Cloudflare may inject its beacon at the edge. Reuse that script when present.
+    if (document.querySelector('script[src*="static.cloudflareinsights.com/beacon.min.js"]')) return;
+    var beacon = document.createElement('script');
+    beacon.defer = true;
+    beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    beacon.setAttribute('data-cf-beacon', JSON.stringify({token: '9f3423bb0d034d91bbe1a12afeff2429'}));
+    document.head.appendChild(beacon);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBeacon, {once: true});
+  else ensureBeacon();
+})();
+</script>
+</body></html>
